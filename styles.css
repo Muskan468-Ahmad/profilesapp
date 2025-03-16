@@ -1,23 +1,24 @@
 /* General Styles */
 body {
-  font-family: Arial, sans-serif;
+  font-family: "Roboto", Arial, sans-serif;
   margin: 0;
   padding: 0;
   line-height: 1.6;
   background-color: #f4f4f4;
-  color: #333;
+  color: #222;
 }
 
 /* Header Styles */
 header {
-  background-color: #333;
+  background-color: #222;
   color: #fff;
-  padding: 20px 0;
+  padding: 15px 0;
   text-align: center;
 }
 
 header h1 {
   margin: 0;
+  font-size: 24px;
 }
 
 nav ul {
@@ -28,17 +29,19 @@ nav ul {
 
 nav ul li {
   display: inline;
-  margin: 0 10px;
+  margin: 0 15px;
 }
 
 nav ul li a {
   color: #fff;
   text-decoration: none;
   font-weight: bold;
+  transition: color 0.3s ease;
 }
 
 nav ul li a:hover {
   text-decoration: underline;
+  color: #ffcc00; /* Improved hover contrast */
 }
 
 /* Main Content Styles */
@@ -47,7 +50,8 @@ main {
   max-width: 800px;
   margin: 20px auto;
   background-color: #fff;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  border-radius: 5px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
 
 section {
@@ -55,22 +59,36 @@ section {
 }
 
 section h2 {
-  color: #333;
-  border-bottom: 2px solid #333;
+  color: #222;
+  border-bottom: 2px solid #222;
   padding-bottom: 5px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  main {
+    padding: 15px;
+    margin: 10px;
+  }
+  
+  nav ul li {
+    display: block;
+    margin: 5px 0;
+    text-align: center;
+  }
 }
 
 /* Footer Styles */
 footer {
-  background-color: #333;
+  background-color: #222;
   color: #fff;
   text-align: center;
   padding: 10px 0;
-  position: fixed;
+  position: relative; /* Fixes overlapping issue */
   width: 100%;
-  bottom: 0;
 }
 
 footer p {
   margin: 0;
 }
+
